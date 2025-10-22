@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 6
+#define SIZE 3
 
 void Merge(int array[], int left, int mid, int right)
 {
@@ -11,7 +11,7 @@ void Merge(int array[], int left, int mid, int right)
     int *L = calloc(n1, sizeof(int));//Left Side
     int *R = calloc(n2, sizeof(int));//Right Side
 
-   //Copy data from array[] to left[] and right[]
+   //Copy data from array[] to L[] and R[]
    for (i = 0; i < n1; i++) L[i] = array[left + i];
    for (j = 0; j < n2; j++) R[j] = array[mid + 1 + j];
 
@@ -42,7 +42,7 @@ void MergeSort(int array[], int left, int right)
 
 int main(void)
 {
-    int array[SIZE] = {5, 6, 3, 4, 2, 1};
+    int array[SIZE] = {1, 2, 0};
     int left = 0;
     int right = SIZE - 1;
 
